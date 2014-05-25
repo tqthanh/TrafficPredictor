@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UIView *labelLatitude;
+@property (weak, nonatomic) IBOutlet UILabel *labelLongitude;
+@property (weak, nonatomic) IBOutlet UIButton *btnStart;
+@property (weak, nonatomic) IBOutlet UIButton *btnStop;
+@property (weak, nonatomic) IBOutlet UIButton *btnSend;
 
 @end

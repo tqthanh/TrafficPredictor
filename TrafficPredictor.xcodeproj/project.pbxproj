@@ -21,6 +21,7 @@
 		05431C9F1931E3250092AC68 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05431C811931E3250092AC68 /* UIKit.framework */; };
 		05431CA71931E3250092AC68 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 05431CA51931E3250092AC68 /* InfoPlist.strings */; };
 		05431CA91931E3250092AC68 /* TrafficPredictorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 05431CA81931E3250092AC68 /* TrafficPredictorTests.m */; };
+		05A00B7B19323D1800251E9B /* WriteFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 05A00B7A19323D1800251E9B /* WriteFile.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		05431CA41931E3250092AC68 /* TrafficPredictorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TrafficPredictorTests-Info.plist"; sourceTree = "<group>"; };
 		05431CA61931E3250092AC68 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		05431CA81931E3250092AC68 /* TrafficPredictorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrafficPredictorTests.m; sourceTree = "<group>"; };
+		05A00B7919323D1800251E9B /* WriteFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WriteFile.h; sourceTree = "<group>"; };
+		05A00B7A19323D1800251E9B /* WriteFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WriteFile.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +122,8 @@
 				05431C931931E3250092AC68 /* ViewController.m */,
 				05431C951931E3250092AC68 /* Images.xcassets */,
 				05431C841931E3250092AC68 /* Supporting Files */,
+				05A00B7919323D1800251E9B /* WriteFile.h */,
+				05A00B7A19323D1800251E9B /* WriteFile.m */,
 			);
 			path = TrafficPredictor;
 			sourceTree = "<group>";
@@ -250,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				05431C941931E3250092AC68 /* ViewController.m in Sources */,
+				05A00B7B19323D1800251E9B /* WriteFile.m in Sources */,
 				05431C8E1931E3250092AC68 /* AppDelegate.m in Sources */,
 				05431C8A1931E3250092AC68 /* main.m in Sources */,
 			);
@@ -456,6 +462,7 @@
 				05431CAE1931E3250092AC68 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		05431CAF1931E3250092AC68 /* Build configuration list for PBXNativeTarget "TrafficPredictorTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +471,7 @@
 				05431CB11931E3250092AC68 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
