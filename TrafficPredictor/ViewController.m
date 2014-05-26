@@ -18,6 +18,7 @@
     CLLocationManager *mgr;
     NSString * UUID;
     NSString *myTime;
+    NSTimer * Timer;
 }
 - (void)viewDidLoad
 {
@@ -42,7 +43,7 @@
     UUID = [[[UIDevice currentDevice] identifierForVendor] UUIDString]; // IOS 6+
     NSLog(@"UDID:: %@", UUID);
     self.labelUDID.text = [NSString stringWithFormat:@"UUID: %@",UUID];
-    [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(CallInInterval) userInfo:nil repeats:YES];
+    Timer = [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(CallInInterval) userInfo:nil repeats:YES];
     _btnStart.enabled= NO;
     
 }
@@ -51,6 +52,15 @@
 {
     [mgr startUpdatingLocation];
 }
+- (IBAction)btnStop:(id)sender {
+    [Timer invalidate];
+    _btnStart.enabled=YES;
+}
+
+
+
+
+
 //===============================================================================================
 //=================================OVERIDE UPDATE LOCATION=======================================
 
