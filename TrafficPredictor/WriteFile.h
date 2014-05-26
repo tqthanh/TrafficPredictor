@@ -13,6 +13,8 @@
 +(void) writeGPS: (NSURL*)url withLatitude:(NSString*) Latitude
    withLongitude:(NSString*) Longitude atTime:(NSString*) Time
          address:(NSString*) MAC;
-
++(void) writeGPS:(NSString*) Latitude
+   withLongitude:(NSString*) Longitude atTime:(NSString*) Time
+         address:(NSString*) MAC;
 
 @end
