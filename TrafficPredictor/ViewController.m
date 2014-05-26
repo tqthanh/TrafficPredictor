@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import <CoreLocation/CoreLocation.h>
+#import "WriteFile.h"
 @interface ViewController ()<CLLocationManagerDelegate>
 
 @end
@@ -15,16 +16,17 @@
 @implementation ViewController
 {
     CLLocationManager *mgr;
-    CLGeocoder *geocoder;
-    CLPlacemark *placemark;
     NSString * UDID;
+    NSString *myTime;
 }
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     mgr = [[CLLocationManager alloc] init ];
-    geocoder = [[CLGeocoder alloc] init];
+    mgr.delegate=self;
+    mgr.desiredAccuracy = kCLLocationAccuracyBest;
+
     NSLog(@"Init success");
 }
 
@@ -39,14 +41,13 @@
 {
     UDID = [[UIDevice currentDevice] performSelector:@selector(uniqueIdentifier)];
     self.labelUDID.text = [NSString stringWithFormat:@"UDID: %@",UDID];
-    [NSTimer scheduledTimerWithTimeInterval:3.0 target:self selector:@selector(CallInInterval) userInfo:nil repeats:YES];
+    [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(CallInInterval) userInfo:nil repeats:YES];
+    _btnStart.hidden=YES;
     
 }
-// Call method update location with interval time 3.0 sec
+// Call method update location with interval time 5.0 sec
 -(void) CallInInterval
 {
-    mgr.delegate=self;
-    //mgr.desiredAccuracy = kCLLocationAccuracyBest;
     [mgr startUpdatingLocation];
 }
 //===============================================================================================
@@ -60,43 +61,19 @@
     NSLog(@"Fail to get location");
 }
 
+
 -(void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
 {
-    CLLocation *curr=newLocation;
-    NSString *MyString;
 	NSDate *now = [NSDate date];
 	NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-	[dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss.SSS"];
-	MyString = [dateFormatter stringFromDate:now];
-    NSLog(@"\nLat : %f \nLong: %f \nTime: %@.",curr.coordinate.latitude,curr.coordinate.longitude,MyString);
-    if(curr!= nil)
-    {
-        self.labelLatitude.text= [NSString stringWithFormat:@"Latitude: %.8f",curr.coordinate.latitude];
-        self.labelLongitude.text= [NSString stringWithFormat:@"Longtitude: %.8f",curr.coordinate.longitude];
-        self.labelTime.text =[NSString stringWithFormat:@"Time: %@",MyString];
-        
-        
-        
-    }
-    /*[geocoder reverseGeocodeLocation:curr completionHandler:^(NSArray *placemarks,NSError *error)
-     {
-         if (error==nil && [placemarks count]>0)
-         {
-             placemark = [placemarks lastObject];
-             self.addr.text= [NSString stringWithFormat:@"%@ %@\n%@ %@\n%@\n %@",placemark.subThoroughfare,placemark.thoroughfare
-              ,placemark.postalCode,placemark.locality,
-              placemark.administrativeArea,placemark.country];
-             
-             //self.addr.text = [NSString stringWithFormat:@"%@ \n",placemark.country];
-             
-             
-             //NSLog(@"%@\n",placemark.subThoroughfare);
-             //NSLog(@"%@\n",placemark.country);
-         }else
-         {
-             NSLog(@"%@",error.debugDescription);
-         }
-     }];*/
+	[dateFormatter setDateFormat:@"yyyy-MM-dd' 'HH:mm:ss"];
+	myTime = [dateFormatter stringFromDate:now];
+    self.labelLatitude.text= [NSString stringWithFormat:@"Latitude: %.8f",newLocation.coordinate.latitude];
+    self.labelLongitude.text= [NSString stringWithFormat:@"Longtitude: %.8f",newLocation.coordinate.longitude];
+    self.labelTime.text =[NSString stringWithFormat:@"Time: %@",myTime];
+    NSLog(@"\nLat : %f \nLong: %f \nTime: %@.",newLocation.coordinate.latitude,newLocation.coordinate.longitude,myTime);
+    [WriteFile writeGPS:self.labelLatitude.text withLongitude:self.labelLongitude.text atTime:myTime address:UDID];
+
     [mgr stopUpdatingLocation];
     NSLog(@"Stop Update!");
     
