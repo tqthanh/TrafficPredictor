@@ -22,6 +22,7 @@
 		05431CA71931E3250092AC68 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 05431CA51931E3250092AC68 /* InfoPlist.strings */; };
 		05431CA91931E3250092AC68 /* TrafficPredictorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 05431CA81931E3250092AC68 /* TrafficPredictorTests.m */; };
 		05A00B7B19323D1800251E9B /* WriteFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 05A00B7A19323D1800251E9B /* WriteFile.m */; };
+		E0A351271933A73B006D11A5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0A351261933A73B006D11A5 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		05431CA81931E3250092AC68 /* TrafficPredictorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrafficPredictorTests.m; sourceTree = "<group>"; };
 		05A00B7919323D1800251E9B /* WriteFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WriteFile.h; sourceTree = "<group>"; };
 		05A00B7A19323D1800251E9B /* WriteFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WriteFile.m; sourceTree = "<group>"; };
+		E0A351261933A73B006D11A5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0A351271933A73B006D11A5 /* CoreLocation.framework in Frameworks */,
 				05431C801931E3250092AC68 /* CoreGraphics.framework in Frameworks */,
 				05431C821931E3250092AC68 /* UIKit.framework in Frameworks */,
 				05431C7E1931E3250092AC68 /* Foundation.framework in Frameworks */,
@@ -104,6 +107,7 @@
 		05431C7C1931E3250092AC68 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E0A351261933A73B006D11A5 /* CoreLocation.framework */,
 				05431C7D1931E3250092AC68 /* Foundation.framework */,
 				05431C7F1931E3250092AC68 /* CoreGraphics.framework */,
 				05431C811931E3250092AC68 /* UIKit.framework */,
