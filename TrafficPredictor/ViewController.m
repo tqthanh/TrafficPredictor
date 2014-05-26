@@ -16,7 +16,7 @@
 @implementation ViewController
 {
     CLLocationManager *mgr;
-    NSString * UDID;
+    NSString * UUID;
     NSString *myTime;
 }
 - (void)viewDidLoad
@@ -39,10 +39,11 @@
 //========================================Button Start Event=====================================
 -(IBAction)btnStart:(id)sender
 {
-    UDID = [[UIDevice currentDevice] performSelector:@selector(uniqueIdentifier)];
-    self.labelUDID.text = [NSString stringWithFormat:@"UDID: %@",UDID];
+    UUID = [[[UIDevice currentDevice] identifierForVendor] UUIDString]; // IOS 6+
+    NSLog(@"UDID:: %@", UUID);
+    self.labelUDID.text = [NSString stringWithFormat:@"UUID: %@",UUID];
     [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(CallInInterval) userInfo:nil repeats:YES];
-    _btnStart.hidden=YES;
+    _btnStart.enabled= NO;
     
 }
 // Call method update location with interval time 5.0 sec
@@ -72,7 +73,7 @@
     self.labelLongitude.text= [NSString stringWithFormat:@"Longtitude: %.8f",newLocation.coordinate.longitude];
     self.labelTime.text =[NSString stringWithFormat:@"Time: %@",myTime];
     NSLog(@"\nLat : %f \nLong: %f \nTime: %@.",newLocation.coordinate.latitude,newLocation.coordinate.longitude,myTime);
-    [WriteFile writeGPS:self.labelLatitude.text withLongitude:self.labelLongitude.text atTime:myTime address:UDID];
+    [WriteFile writeGPS:self.labelLatitude.text withLongitude:self.labelLongitude.text atTime:myTime address:UUID];
 
     [mgr stopUpdatingLocation];
     NSLog(@"Stop Update!");
