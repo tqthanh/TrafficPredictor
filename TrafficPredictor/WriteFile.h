@@ -16,5 +16,6 @@
 +(void) writeGPS:(NSString*) Latitude
    withLongitude:(NSString*) Longitude atTime:(NSString*) Time
          address:(NSString*) MAC;
++(void) clearGPS;
 
 @end

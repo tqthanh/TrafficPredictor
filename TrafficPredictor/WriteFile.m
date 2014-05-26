@@ -10,6 +10,20 @@
 
 @implementation WriteFile
 
++(void) clearGPS
+{
+    NSString* docPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)objectAtIndex:0] ;
+    
+    NSLog(@"%@",docPath);
+    NSString* txtFile = [docPath stringByAppendingPathComponent:@"GPS.txt"];
+    
+    NSLog(@"%@",txtFile);
+    if ([[NSFileManager defaultManager] fileExistsAtPath:txtFile])
+    {
+        [[NSFileManager defaultManager] removeItemAtPath:txtFile error:nil];
+    }
+}
+
 +(void) writeGPS: (NSURL*)url withLatitude:(NSString*) Latitude
    withLongitude:(NSString*) Longitude atTime:(NSString*) Time
          address:(NSString*) MAC
