@@ -7,12 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
 
 @interface ViewController : UIViewController
-@property (strong, nonatomic) IBOutlet UIView *labelLatitude;
+@property (weak, nonatomic) IBOutlet UILabel *labelLatitude;
 @property (weak, nonatomic) IBOutlet UILabel *labelLongitude;
+@property (weak, nonatomic) IBOutlet UILabel *labelTime;
+@property (weak, nonatomic) IBOutlet UILabel *labelUDID;
 @property (weak, nonatomic) IBOutlet UIButton *btnStart;
 @property (weak, nonatomic) IBOutlet UIButton *btnStop;
 @property (weak, nonatomic) IBOutlet UIButton *btnSend;
+
+-(IBAction)btnStart:(id)sender;
 
 @end
