@@ -27,7 +27,6 @@
 		E0F7922919364C14006D16BB /* gpsBorder.png in Resources */ = {isa = PBXBuildFile; fileRef = E0F7922819364C14006D16BB /* gpsBorder.png */; };
 		E0F7922B19364E7A006D16BB /* clockIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = E0F7922A19364E7A006D16BB /* clockIcon.png */; };
 		E0F7922D193652B7006D16BB /* clockBar.png in Resources */ = {isa = PBXBuildFile; fileRef = E0F7922C193652B7006D16BB /* clockBar.png */; };
-		
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,8 +66,6 @@
 		E0F7922819364C14006D16BB /* gpsBorder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gpsBorder.png; sourceTree = "<group>"; };
 		E0F7922A19364E7A006D16BB /* clockIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clockIcon.png; sourceTree = "<group>"; };
 		E0F7922C193652B7006D16BB /* clockBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clockBar.png; sourceTree = "<group>"; };
-		E0F7922E193655D2006D16BB /* btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn.png; sourceTree = "<group>"; };
-		E0F79230193658DA006D16BB /* btnfix.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btnfix.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,8 +173,6 @@
 		E0A3512819340339006D11A5 /* image source */ = {
 			isa = PBXGroup;
 			children = (
-				E0F7922E193655D2006D16BB /* btn.png */,
-				E0F79230193658DA006D16BB /* btnfix.png */,
 				E0F7922C193652B7006D16BB /* clockBar.png */,
 				E0F7922A19364E7A006D16BB /* clockIcon.png */,
 				E0F7922819364C14006D16BB /* gpsBorder.png */,
@@ -264,12 +259,10 @@
 			files = (
 				E0F7922919364C14006D16BB /* gpsBorder.png in Resources */,
 				E0F7922D193652B7006D16BB /* clockBar.png in Resources */,
-				E0F79231193658DA006D16BB /* btnfix.png in Resources */,
 				E0A3512A19340346006D11A5 /* Untitled-1.jpg in Resources */,
 				05431C961931E3250092AC68 /* Images.xcassets in Resources */,
 				E0F7922B19364E7A006D16BB /* clockIcon.png in Resources */,
 				05431C881931E3250092AC68 /* InfoPlist.strings in Resources */,
-				E0F7922F193655D2006D16BB /* btn.png in Resources */,
 				05431C911931E3250092AC68 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
