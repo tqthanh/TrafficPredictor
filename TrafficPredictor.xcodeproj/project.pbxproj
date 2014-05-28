@@ -23,6 +23,11 @@
 		05431CA91931E3250092AC68 /* TrafficPredictorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 05431CA81931E3250092AC68 /* TrafficPredictorTests.m */; };
 		05A00B7B19323D1800251E9B /* WriteFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 05A00B7A19323D1800251E9B /* WriteFile.m */; };
 		E0A351271933A73B006D11A5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0A351261933A73B006D11A5 /* CoreLocation.framework */; };
+		E0A3512A19340346006D11A5 /* Untitled-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E0A3512919340346006D11A5 /* Untitled-1.jpg */; };
+		E0F7922919364C14006D16BB /* gpsBorder.png in Resources */ = {isa = PBXBuildFile; fileRef = E0F7922819364C14006D16BB /* gpsBorder.png */; };
+		E0F7922B19364E7A006D16BB /* clockIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = E0F7922A19364E7A006D16BB /* clockIcon.png */; };
+		E0F7922D193652B7006D16BB /* clockBar.png in Resources */ = {isa = PBXBuildFile; fileRef = E0F7922C193652B7006D16BB /* clockBar.png */; };
+		
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +63,12 @@
 		05A00B7919323D1800251E9B /* WriteFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WriteFile.h; sourceTree = "<group>"; };
 		05A00B7A19323D1800251E9B /* WriteFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WriteFile.m; sourceTree = "<group>"; };
 		E0A351261933A73B006D11A5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		E0A3512919340346006D11A5 /* Untitled-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Untitled-1.jpg"; sourceTree = "<group>"; };
+		E0F7922819364C14006D16BB /* gpsBorder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gpsBorder.png; sourceTree = "<group>"; };
+		E0F7922A19364E7A006D16BB /* clockIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clockIcon.png; sourceTree = "<group>"; };
+		E0F7922C193652B7006D16BB /* clockBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clockBar.png; sourceTree = "<group>"; };
+		E0F7922E193655D2006D16BB /* btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn.png; sourceTree = "<group>"; };
+		E0F79230193658DA006D16BB /* btnfix.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btnfix.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +146,7 @@
 		05431C841931E3250092AC68 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E0A3512819340339006D11A5 /* image source */,
 				05431C851931E3250092AC68 /* TrafficPredictor-Info.plist */,
 				05431C861931E3250092AC68 /* InfoPlist.strings */,
 				05431C891931E3250092AC68 /* main.m */,
@@ -159,6 +171,19 @@
 				05431CA51931E3250092AC68 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E0A3512819340339006D11A5 /* image source */ = {
+			isa = PBXGroup;
+			children = (
+				E0F7922E193655D2006D16BB /* btn.png */,
+				E0F79230193658DA006D16BB /* btnfix.png */,
+				E0F7922C193652B7006D16BB /* clockBar.png */,
+				E0F7922A19364E7A006D16BB /* clockIcon.png */,
+				E0F7922819364C14006D16BB /* gpsBorder.png */,
+				E0A3512919340346006D11A5 /* Untitled-1.jpg */,
+			);
+			name = "image source";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,8 +262,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0F7922919364C14006D16BB /* gpsBorder.png in Resources */,
+				E0F7922D193652B7006D16BB /* clockBar.png in Resources */,
+				E0F79231193658DA006D16BB /* btnfix.png in Resources */,
+				E0A3512A19340346006D11A5 /* Untitled-1.jpg in Resources */,
 				05431C961931E3250092AC68 /* Images.xcassets in Resources */,
+				E0F7922B19364E7A006D16BB /* clockIcon.png in Resources */,
 				05431C881931E3250092AC68 /* InfoPlist.strings in Resources */,
+				E0F7922F193655D2006D16BB /* btn.png in Resources */,
 				05431C911931E3250092AC68 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

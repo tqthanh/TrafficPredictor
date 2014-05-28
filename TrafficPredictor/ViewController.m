@@ -10,7 +10,9 @@
 #import <CoreLocation/CoreLocation.h>
 #import "WriteFile.h"
 @interface ViewController ()<CLLocationManagerDelegate>
-
+{
+    NSTimer * timer;
+}
 @end
 
 @implementation ViewController
@@ -26,7 +28,13 @@
     mgr = [[CLLocationManager alloc] init ];
     mgr.delegate=self;
     mgr.desiredAccuracy = kCLLocationAccuracyBest;
-
+    
+    //set icon background
+    
+    
+    
+    //set background opacity
+    self.background.alpha = 0.45;
     NSLog(@"Init success");
 }
 
@@ -42,10 +50,19 @@
     UUID = [[[UIDevice currentDevice] identifierForVendor] UUIDString]; // IOS 6+
     NSLog(@"UDID:: %@", UUID);
     self.labelUDID.text = [NSString stringWithFormat:@"UUID: %@",UUID];
-    [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(CallInInterval) userInfo:nil repeats:YES];
+    timer = [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(CallInInterval) userInfo:nil repeats:YES];
     _btnStart.enabled= NO;
     
 }
+- (IBAction)btnStop:(id)sender {
+    
+    [timer invalidate];
+    _btnStart.enabled = YES;
+}
+
+
+
+
 // Call method update location with interval time 5.0 sec
 -(void) CallInInterval
 {
@@ -71,7 +88,7 @@
 	myTime = [dateFormatter stringFromDate:now];
     self.labelLatitude.text= [NSString stringWithFormat:@"Latitude: %.8f",newLocation.coordinate.latitude];
     self.labelLongitude.text= [NSString stringWithFormat:@"Longtitude: %.8f",newLocation.coordinate.longitude];
-    self.labelTime.text =[NSString stringWithFormat:@"Time: %@",myTime];
+    self.labelTime.text =[NSString stringWithFormat:@"%@",myTime];
     NSLog(@"\nLat : %f \nLong: %f \nTime: %@.",newLocation.coordinate.latitude,newLocation.coordinate.longitude,myTime);
     [WriteFile writeGPS:self.labelLatitude.text withLongitude:self.labelLongitude.text atTime:myTime address:UUID];
 

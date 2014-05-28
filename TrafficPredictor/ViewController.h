@@ -17,6 +17,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnStart;
 @property (weak, nonatomic) IBOutlet UIButton *btnStop;
 @property (weak, nonatomic) IBOutlet UIButton *btnSend;
+@property (weak, nonatomic) IBOutlet UIImageView *background;
+
 
 -(IBAction)btnStart:(id)sender;
 
