@@ -82,6 +82,10 @@
                                     <action selector="btnStart:" destination="vXZ-lx-hvc" eventType="touchDown" id="3C3-xy-kVP"/>
                                 </connections>
                             </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Yqa-dW-MkE">
+                                <rect key="frame" x="126" y="510" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="1"/>
@@ -95,6 +99,7 @@
                         <outlet property="labelLongitude" destination="qYq-HW-LV4" id="P35-qR-9lY"/>
                         <outlet property="labelTime" destination="4zn-vD-qsi" id="8hA-S1-DzG"/>
                         <outlet property="labelUDID" destination="oM3-HI-ZSG" id="833-Vl-zQP"/>
+                        <outlet property="onSwitch" destination="Yqa-dW-MkE" id="lVb-xT-fzQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

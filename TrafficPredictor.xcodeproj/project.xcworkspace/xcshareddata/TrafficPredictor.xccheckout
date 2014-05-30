@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>F9553E3F-15D1-4527-9A46-52C902F17ED6</string>
+	<key>IDESourceControlProjectName</key>
+	<string>TrafficPredictor</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>617F8A7B-DDFC-4578-8C99-C6894C90510D</key>
+		<string>https://github.com/tqthanh/TrafficPredictor.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>TrafficPredictor.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>617F8A7B-DDFC-4578-8C99-C6894C90510D</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/tqthanh/TrafficPredictor.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>617F8A7B-DDFC-4578-8C99-C6894C90510D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>617F8A7B-DDFC-4578-8C99-C6894C90510D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>TrafficPredictor</string>
+		</dict>
+	</array>
+</dict>
+</plist>

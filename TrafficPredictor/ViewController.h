@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnSend;
 @property (weak, nonatomic) IBOutlet UIImageView *background;
 
+@property (weak, nonatomic) IBOutlet UISwitch *onSwitch;
 
 -(IBAction)btnStart:(id)sender;
 
