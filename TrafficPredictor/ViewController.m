@@ -63,6 +63,9 @@
     
     [timer invalidate];
     _btnStart.enabled = YES;
+    _btnSend.enabled = YES;
+    
+    [WriteFile clearGPS];
 }
 ////////////////////////////////////////////////////////
 - (void)stateChanged:(UISwitch *)switchState
